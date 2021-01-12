@@ -1,0 +1,27 @@
+info:
+  title: some spec
+  version: '1.0'
+schemes:
+- https
+swagger: '2.0'
+paths:
+  /path/to/nowhere:
+    post:
+      operationId: operation
+      parameters:
+      - name: object
+        in: body
+        schema:
+          $ref: '#/definitions/SomeObject'
+      responses:
+        '200':
+          description: ok
+definitions:
+  SomeObject:
+    properties:
+      product:
+        enum:
+          - "hello"
+          - "goodbye"
+        type: string
+
